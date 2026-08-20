@@ -50,7 +50,11 @@ AXI-Stream 数据接口包含 `TDATA/TKEEP/TLAST/TVALID/TREADY`。UART 线上只
 
 运行全部测试：
 
+`xmake build -a` 先使用 Icarus Verilog 编译全部测试，然后分别运行：
+
 ```bash
+xmake build -a
+
 xmake run tb_test00
 xmake run tb_test01
 xmake run tb_test02

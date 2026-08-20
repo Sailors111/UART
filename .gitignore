@@ -1,0 +1,14 @@
+# xmake cache and build output
+.xmake/
+build/
+
+# Simulation output
+sim/
+wave/
+*.vvp
+*.vcd
+*.fsdb
+
+# Waveform viewer logs
+vcd2fsdbLog/
+verdiLog/
