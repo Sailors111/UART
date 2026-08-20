@@ -1,0 +1,19 @@
+mkdir -p sim wave
+
+# Compile first:
+xmake build tb_test00
+xmake build tb_test01
+xmake build tb_test02
+
+# Run after compilation:
+xmake run tb_test00
+xmake run tb_test01
+xmake run tb_test02
+
+# Direct Icarus commands are also possible:
+# iverilog -g2012 -s tb_test00 -o sim/tb_test00.vvp rtl/*.v tb/tb_test00.sv
+# vvp sim/tb_test00.vvp
+# iverilog -g2012 -s tb_test01 -o sim/tb_test01.vvp rtl/*.v tb/tb_test01.sv
+# vvp sim/tb_test01.vvp
+# iverilog -g2012 -s tb_test02 -o sim/tb_test02.vvp rtl/async_fifo.v tb/tb_test02.sv
+# vvp sim/tb_test02.vvp
